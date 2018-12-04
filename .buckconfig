@@ -1,0 +1,10 @@
+[project]
+  ignore = .git
+
+[parser]
+  default_build_file_syntax = SKYLARK
+
+[cxx]
+  should_remap_host_platform = true
+  ; Required to make tests pass https://github.com/awslabs/aws-checksums/issues/8
+  cppflags = -DDEBUG_BUILD=1

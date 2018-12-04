@@ -1,0 +1,14 @@
+cxx_binary(
+  name = 'tests', 
+  header_namespace = '', 
+  headers = glob([
+    '*.h', 
+    'crc_test.c', 
+  ]), 
+  srcs = glob([
+    'run_tests.c', 
+  ]), 
+  deps = [
+    '//:aws-checksums', 
+  ], 
+)
